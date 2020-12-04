@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">E-CommerceApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Bottom Navigation menu's
+    <string name="home">Home</string>
+    <string name="mycart">My Cart</string>
+    <string name="favorites">Favourites</string>
+    <string name="profile">Profile</string>
+</resources>

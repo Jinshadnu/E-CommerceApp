@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F5FA"
+        tools:context=".bottomNavigation.HomeFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+           <include
+               android:id="@+id/layoutBase"
+               layout="@layout/layout_base"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <RelativeLayout
+               android:id="@+id/rl_banner"
+               android:layout_width="match_parent"
+               android:layout_below="@id/layoutBase"
+               android:layout_marginTop="0dp"
+               android:layout_height="@dimen/size_180dp"
+               android:focusableInTouchMode="true">
+
+               <com.example.e_commerceapp.util.AutoScrollViewPager
+                   android:id="@+id/vp_image"
+                   android:layout_width="fill_parent"
+                   android:layout_height="fill_parent"
+                   tools:ignore="MissingClass"/>
+
+               <com.viewpagerindicator.CirclePageIndicator
+                   android:id="@+id/cp_image"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:gravity="bottom"
+                   android:padding="10dip"
+                   app:centered="true"
+                   app:fillColor="@color/colorDarkstateRed"
+                   app:pageColor="@android:color/white"
+                   app:snap="false"
+                   tools:ignore="MissingClass" />
+           </RelativeLayout>
+
+           <TextView
+               android:id="@+id/text_categories"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/size_16dp"
+               android:text="Categories"
+               android:textStyle="bold"
+               android:textSize="@dimen/size_20dp"
+               android:textColor="@color/colorDarkstateRed"
+               android:fontFamily="@font/amaranth"
+               android:layout_below="@id/rl_banner"
+               android:layout_marginTop="@dimen/size_7dp"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycler_categories"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/text_categories"
+               android:layout_marginTop="@dimen/size_1dp"
+               />
+
+           <TextView
+               android:id="@+id/text_popular_products"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Special Offers"
+               android:textColor="@color/colorDarkstateRed"
+               android:fontFamily="@font/amaranth"
+               android:textStyle="bold"
+               android:layout_below="@id/recycler_categories"
+               android:layout_marginTop="@dimen/size_5dp"
+               android:textSize="@dimen/size_20dp"
+               android:layout_marginLeft="@dimen/size_16dp"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycler_popular_products"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/text_popular_products"
+               android:layout_marginTop="@dimen/size_1dp"
+               android:padding="@dimen/size_5dp"/>
+
+
+
+       </RelativeLayout>
+
+
+
+    </ScrollView>
+</layout>
