@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F5FA"
+        tools:context=".activity.user.ShippingAddressActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layoutBase"
+                layout="@layout/layout_base"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_250dp"
+                android:layout_below="@id/layoutBase"
+                android:background="@color/colorDarkstateRed">
+
+                <ImageView
+                    android:id="@+id/image_icon"
+                    android:layout_width="@dimen/size_100dp"
+                    android:layout_height="@dimen/size_100dp"
+                    android:src="@drawable/icons"
+                    android:layout_marginTop="@dimen/size_25dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fill in the form below so we can know exactly
+where to ship your order."
+                    android:layout_below="@id/image_icon"
+                    android:layout_marginLeft="@dimen/size_15dp"
+                    android:layout_marginRight="@dimen/size_15dp"
+                    android:textColor="@color/md_grey_50"
+                    android:layout_marginTop="@dimen/size_15dp"
+                    android:textSize="@dimen/size_15dp"
+                    android:fontFamily="@font/amaranth"/>
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-50dp"
+                app:cardCornerRadius="@dimen/size_2dp"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:layout_marginRight="@dimen/size_15dp"
+                app:cardBackgroundColor="@color/colorwhite"
+                android:paddingBottom="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/padd_10"
+                android:layout_below="@id/relative">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Contact Name"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/amaranth"
+                        android:layout_marginTop="@dimen/size_15dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/padd_10"/>
+
+                    <EditText
+                        android:id="@+id/edittext_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_name"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:hint="Enter Name"
+                        android:background="@drawable/edittext_background"
+                        android:padding="@dimen/padd_10"/>
+
+                    <TextView
+                        android:id="@+id/text_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Email"
+                        android:layout_below="@id/edittext_name"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/amaranth"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/padd_10"/>
+
+                    <EditText
+                        android:id="@+id/edittext_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_email"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:hint="Enter Name"
+                        android:background="@drawable/edittext_background"
+                        android:padding="@dimen/padd_10"/>
+                    <TextView
+                        android:id="@+id/text_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Phone"
+                        android:layout_below="@id/edittext_email"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/amaranth"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/padd_10"/>
+
+                    <EditText
+                        android:id="@+id/edittext_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_phone"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:hint="Enter Phone Number"
+                        android:background="@drawable/edittext_background"
+                        android:padding="@dimen/padd_10"/>
+
+                    <TextView
+                        android:id="@+id/text_address1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Address Line 1"
+                        android:layout_below="@id/edittext_phone"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/amaranth"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/padd_10"/>
+
+                    <EditText
+                        android:id="@+id/edittext_address1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_80dp"
+                        android:layout_below="@id/text_address1"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:hint="Enter Phone Number"
+                        android:background="@drawable/edittext_background"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_address2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Address Line 2"
+                        android:layout_below="@id/edittext_address1"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/amaranth"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/padd_10"/>
+
+                    <EditText
+                        android:id="@+id/edittext_address2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_80dp"
+                        android:layout_below="@id/text_address2"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:hint="Enter Phone Number"
+                        android:background="@drawable/edittext_background"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Pin Code"
+                        android:layout_below="@id/edittext_address2"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/amaranth"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/padd_10"/>
+
+                    <EditText
+                        android:id="@+id/edittext_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_pin"
+                        android:layout_marginTop="@dimen/padd_10"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:hint="Enter Phone Number"
+                        android:background="@drawable/edittext_background"
+                        android:padding="@dimen/padd_10"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/edittext_pin"
+                        android:layout_marginTop="@dimen/size_15dp"
+                        android:background="@drawable/button_shape"
+                        android:text="Submit"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:layout_marginBottom="@dimen/size_15dp"/>
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>

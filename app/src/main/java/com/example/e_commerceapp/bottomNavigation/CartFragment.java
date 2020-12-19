@@ -1,5 +1,6 @@
 package com.example.e_commerceapp.bottomNavigation;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.e_commerceapp.R;
+import com.example.e_commerceapp.activity.user.ShippingAddressActivity;
 import com.example.e_commerceapp.bottomNavigation.adapter.CartAdapter;
 import com.example.e_commerceapp.bottomNavigation.pojo.Cart;
 import com.example.e_commerceapp.bottomNavigation.viewModel.CartViewModel;
@@ -92,6 +94,9 @@ public class CartFragment extends Fragment {
         cartBinding.recyclerCartItems.setHasFixedSize(true);
         cartBinding.recyclerCartItems.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));
 
+        cartBinding.btnBuy.setOnClickListener(view -> {
+            startActivity(new Intent(getActivity(), ShippingAddressActivity.class));
+        });
         getCartItems();
         return cartBinding.getRoot();
     }

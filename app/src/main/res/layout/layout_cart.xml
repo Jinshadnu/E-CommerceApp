@@ -29,6 +29,7 @@
                 android:src="@drawable/watch"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/size_5dp"
+                app:cart="@{cartItems.item_image}"
                 />
 
             <TextView
@@ -36,19 +37,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/imageView_item"
-                android:text="Shoe"
+                android:text="@{cartItems.item_name}"
                 android:layout_marginLeft="@dimen/size_16dp"
                 android:textStyle="bold"
                 android:textSize="@dimen/size_20dp"
                 android:layout_marginTop="@dimen/size_25dp"
-                android:textColor="@color/colorDarkstateRed"
+                android:textColor="@color/colorblack"
                 android:fontFamily="@font/amaranth"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/imageView_item"
-                android:text="Rs 750"
+                android:text="@{`Rs. ` +cartItems.price}"
                 android:layout_marginLeft="@dimen/size_16dp"
                 android:textStyle="normal"
                 android:textSize="@dimen/size_16dp"
@@ -75,7 +76,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:focusableInTouchMode="false"
-                    android:src="@drawable/ic_minus__1_" />
+                    android:src="@drawable/ic_minus__2_" />
 
                 <TextView
                     android:id="@+id/quantityValue"
@@ -84,6 +85,7 @@
                     android:layout_marginLeft="@dimen/size_8dp"
                     android:layout_marginRight="@dimen/size_8dp"
                     android:text="1"
+                    android:layout_gravity="center_vertical"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_16dp" />
 
@@ -95,7 +97,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:focusableInTouchMode="false"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_plus__2_" />
             </LinearLayout>
 
             <RelativeLayout

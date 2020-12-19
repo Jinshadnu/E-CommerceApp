@@ -1,10 +1,12 @@
 package com.example.e_commerceapp.bottomNavigation.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.e_commerceapp.R;
+import com.example.e_commerceapp.activity.SubCategoryActivity;
 import com.example.e_commerceapp.bottomNavigation.pojo.Categories;
 import com.example.e_commerceapp.databinding.LayoutCategoriesBinding;
 
@@ -36,6 +38,12 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
      Categories categories=categoriesList.get(position);
      holder.categoriesBinding.setCategories(categories);
+
+     holder.categoriesBinding.cardViewServices.setOnClickListener(view -> {
+         Intent intent=new Intent(context.getApplicationContext(), SubCategoryActivity.class);
+         context.startActivity(intent);
+     });
+
     }
 
     @Override

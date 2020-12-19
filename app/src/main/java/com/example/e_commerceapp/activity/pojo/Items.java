@@ -1,13 +1,23 @@
-package com.example.e_commerceapp.bottomNavigation.pojo;
+package com.example.e_commerceapp.activity.pojo;
 
 import android.widget.ImageView;
 
 import androidx.databinding.BindingAdapter;
 
-public class Cart {
+public class Items {
     public int item_id;
     public String item_name;
-    public String price;
+    public int item_image;
+    public String item_price;
+
+    public Items(int item_id, String item_name, int item_image, String item_price) {
+        this.item_id = item_id;
+        this.item_name = item_name;
+        this.item_image = item_image;
+        this.item_price = item_price;
+    }
+
+
 
     public int getItem_id() {
         return item_id;
@@ -25,14 +35,6 @@ public class Cart {
         this.item_name = item_name;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
     public int getItem_image() {
         return item_image;
     }
@@ -41,19 +43,16 @@ public class Cart {
         this.item_image = item_image;
     }
 
-    public int item_image;
-
-    public Cart(String item_name, String price, int item_image) {
-        this.item_name = item_name;
-        this.price = price;
-        this.item_image = item_image;
+    public String getItem_price() {
+        return item_price;
     }
-    @BindingAdapter("cart")
+
+    public void setItem_price(String item_price) {
+        this.item_price = item_price;
+    }
+    @BindingAdapter("items")
     public static void loadImage(ImageView imageView, int image){
         imageView.setImageResource(image);
     }
-
-
-
 
 }

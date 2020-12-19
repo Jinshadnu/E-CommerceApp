@@ -18,8 +18,11 @@ public class CartRepository {
         MutableLiveData mutableLiveData=new MutableLiveData();
 
         List<Cart> cartList=new ArrayList<>();
-        cartList.add(new Cart("Shoe","750", R.drawable.shoes));
-        cartList.add(new Cart("Watch","250", R.drawable.watch));
+        cartList.add(new Cart("Britex Watch","750", R.drawable.watch));
+        cartList.add(new Cart("Dc Shoe","950", R.drawable.shoes));
+        cartList.add(new Cart("Britex Watch","750", R.drawable.watch));
+
+
 
         mutableLiveData.setValue(cartList);
 
