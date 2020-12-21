@@ -33,12 +33,11 @@ public class SubCategoryRepository {
 
     public LiveData<List<Items>> getItems(){
         MutableLiveData mutableLiveData=new MutableLiveData();
-
         List<Items> itemsList=new ArrayList<>();
-        itemsList.add(new Items(100,"Galaxy f41", R.drawable.galaxyf41,"15000.00"));
+        itemsList.add(new Items(100,"Iphone 11", R.drawable.iphone1,"15000.00"));
         itemsList.add(new Items(101,"Note 10", R.drawable.note10,"25000.00"));
-        itemsList.add(new Items(102,"Iphone 11", R.drawable.iphone1,"50000.00"));
-        itemsList.add(new Items(101,"Note 10", R.drawable.galaxyf41,"25000.00"));
+        itemsList.add(new Items(102,"Note 10", R.drawable.note10,"50000.00"));
+        itemsList.add(new Items(101,"Galaxy f41", R.drawable.galaxyf41,"25000.00"));
         itemsList.add(new Items(101,"Note 10", R.drawable.note10,"25000.00"));
 
 
