@@ -17,10 +17,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:clipToPadding="false">
 
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_close_24"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="@dimen/size_8dp"/>
 
 
 
@@ -121,29 +127,29 @@
                     android:src="@drawable/ic_plus__2_" />
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView_item"
-                android:background="@drawable/border"
-                android:layout_alignParentBottom="true"
-                >
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView_item"-->
+<!--                android:background="@drawable/border"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                >-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"
-                    android:text="Remove"
-                    android:padding="@dimen/size_5dp"
-                    android:textSize="@dimen/size_16dp"
-                    android:textStyle="bold"
-                    android:drawablePadding="@dimen/padd_10"
-                    android:drawableLeft="@drawable/ic_baseline_delete_24"
-                    android:textColor="@color/colorblack"
-                    android:fontFamily="@font/amaranth"/>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:text="Remove"-->
+<!--                    android:padding="@dimen/size_5dp"-->
+<!--                    android:textSize="@dimen/size_16dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:drawablePadding="@dimen/padd_10"-->
+<!--                    android:drawableLeft="@drawable/ic_baseline_delete_24"-->
+<!--                    android:textColor="@color/colorblack"-->
+<!--                    android:fontFamily="@font/amaranth"/>-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
         </RelativeLayout>
 
