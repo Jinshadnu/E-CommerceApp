@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import com.example.e_commerceapp.R;
 import com.example.e_commerceapp.bottomNavigation.pojo.Cart;
@@ -38,6 +39,7 @@ public List<Cart> cartList;
     public void onBindViewHolder(@NonNull CartAdapter.CartViewHolder holder, int position) {
      Cart cart=cartList.get(position);
      holder.cartBinding.setCartItems(cart);
+     holder.cartBinding.cardViewCart.setAnimation(AnimationUtils.loadAnimation(context,R.anim.item_fall_down));
     }
 
     @Override

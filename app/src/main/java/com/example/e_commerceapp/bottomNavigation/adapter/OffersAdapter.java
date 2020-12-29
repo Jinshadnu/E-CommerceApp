@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import com.example.e_commerceapp.R;
 import com.example.e_commerceapp.bottomNavigation.pojo.Offers;
@@ -37,6 +38,7 @@ public class OffersAdapter extends RecyclerView.Adapter<OffersAdapter.OffersView
     public void onBindViewHolder(@NonNull OffersViewHolder holder, int position) {
      Offers offers=offersList.get(position);
      holder.popularProductsBinding.setOffers(offers);
+     holder.popularProductsBinding.cardPopularproducts.setAnimation(AnimationUtils.loadAnimation(context,R.anim.fade_transition_animation));
     }
 
     @Override

@@ -31,7 +31,9 @@ public ItemsAdapter itemsAdapter;
         setContentView(R.layout.activity_sub_category);
         subCategoryBinding= DataBindingUtil.setContentView(this,R.layout.activity_sub_category);
 
+        subCategoryBinding.layoutBase.textTitle.setText("Sub Category");
 
+        subCategoryBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
 
         subCategoryViewModel= ViewModelProviders.of(this).get(SubCategoryViewModel.class);
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import com.example.e_commerceapp.R;
 import com.example.e_commerceapp.activity.SubCategoryActivity;
@@ -38,6 +39,8 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
      Categories categories=categoriesList.get(position);
      holder.categoriesBinding.setCategories(categories);
+
+     holder.categoriesBinding.cardViewCategories.setAnimation(AnimationUtils.loadAnimation(context,R.anim.fade_transition_animation));
 
      holder.categoriesBinding.cardViewServices.setOnClickListener(view -> {
          Intent intent=new Intent(context.getApplicationContext(), SubCategoryActivity.class);

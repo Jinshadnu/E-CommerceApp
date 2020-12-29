@@ -1,11 +1,14 @@
 package com.example.e_commerceapp.activity.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import com.example.e_commerceapp.R;
 import com.example.e_commerceapp.activity.pojo.Items;
+import com.example.e_commerceapp.activity.products.ProductDetailsActivity;
 import com.example.e_commerceapp.databinding.LayoutSubitemsBinding;
 
 import java.util.List;
@@ -36,6 +39,11 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
       Items items=itemsList.get(position);
       holder.subitemsBinding.setSubitems(items);
+      holder.subitemsBinding.cardViewItem.setAnimation(AnimationUtils.loadAnimation(context,R.anim.fade_scale_animation));
+      holder.subitemsBinding.cardViewItem.setOnClickListener(v -> {
+          context.startActivity(new Intent(context.getApplicationContext(), ProductDetailsActivity.class));
+      });
+
     }
 
     @Override
