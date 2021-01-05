@@ -35,33 +35,31 @@
 
             <TextView
                 android:id="@+id/textView34"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/searchview"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginRight="@dimen/padd_10"
+                android:padding="@dimen/padd_10"
+                android:background="@color/colorDarkstateRed"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="@dimen/size_10dp"
                 android:fontFamily="@font/amaranth"
-                android:text="Select SubCategory"
-                android:textColor="@color/colorblack"
-                android:textSize="24sp"
+                android:text="Select Items"
+                android:textColor="@color/colorwhite"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_subCategories"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_5dp"
-                android:layout_below="@id/textView34"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_products"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="2dp"
-                android:layout_below="@id/recycler_subCategories" />
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textView34" />
 
 
 

@@ -1,10 +1,13 @@
 package com.example.e_commerceapp.activity.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.ViewGroup;
 
 import com.example.e_commerceapp.R;
+import com.example.e_commerceapp.activity.SubCategoryActivity;
 import com.example.e_commerceapp.activity.pojo.SubCategories;
+import com.example.e_commerceapp.activity.products.ProductDetailsActivity;
 import com.example.e_commerceapp.databinding.LayoutSubcategoryBinding;
 
 import java.util.List;
@@ -35,6 +38,9 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
     public void onBindViewHolder(@NonNull SubCategoryViewHolder holder, int position) {
      SubCategories subCategories=subCategoriesList.get(position);
      holder.subcategoryBinding.setSubcategories(subCategories);
+     holder.subcategoryBinding.cardSubcategory.setOnClickListener(v -> {
+         context.startActivity(new Intent(context.getApplicationContext(), SubCategoryActivity.class));
+     });
     }
 
     @Override

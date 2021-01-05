@@ -65,12 +65,12 @@ public FragmentProfileBinding profileBinding;
         // Inflate the layout for this fragment
 
         profileBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_profile,container,false);
-        profileBinding.layoutBase.textTitle.setText("Profile");
-
-        profileBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
-        profileBinding.layoutBase.toolbar.setNavigationOnClickListener(v -> {
-            getActivity().onBackPressed();
-        });
+//        profileBinding.layoutBase.textTitle.setText("Profile");
+//
+//        profileBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
+//        profileBinding.layoutBase.toolbar.setNavigationOnClickListener(v -> {
+//            getActivity().onBackPressed();
+//        });
        return profileBinding.getRoot();
     }
 }

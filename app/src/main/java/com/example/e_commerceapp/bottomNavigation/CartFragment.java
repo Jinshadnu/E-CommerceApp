@@ -84,12 +84,12 @@ public class CartFragment extends Fragment {
         // Inflate the layout for this fragment
         cartBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_cart,container,false);
 
-        cartBinding.layoutBase.textTitle.setText("My Cart");
-
-        cartBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
-        cartBinding.layoutBase.toolbar.setNavigationOnClickListener(v -> {
-            getActivity().onBackPressed();
-        });
+//        cartBinding.layoutBase.textTitle.setText("My Cart");
+//
+//        cartBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
+//        cartBinding.layoutBase.toolbar.setNavigationOnClickListener(v -> {
+//            getActivity().onBackPressed();
+//        });
 
         cartBinding.recyclerCartItems.setHasFixedSize(true);
         cartBinding.recyclerCartItems.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));

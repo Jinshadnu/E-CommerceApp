@@ -17,6 +17,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_pricedetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/layoutBase"
@@ -37,6 +38,7 @@
                     android:layout_height="wrap_content"
                     android:text="Price Details"
                     android:textSize="@dimen/size_20dp"
+                    android:textStyle="bold"
                     android:layout_marginTop="@dimen/size_20dp"
                     android:textColor="@color/colorblack"
                     android:fontFamily="@font/amaranth"
@@ -63,6 +65,7 @@
                     android:text="Rs.15000/-"
                     android:textSize="@dimen/size_16dp"
                     android:textColor="@color/colorblack"
+                    android:textStyle="bold"
                     android:layout_marginTop="@dimen/size_20dp"
                     android:padding="@dimen/padd_10"
                     android:layout_alignParentRight="true"
@@ -89,6 +92,7 @@
                     android:layout_below="@id/text_price"
                     android:text="Free"
                     android:textSize="@dimen/size_16dp"
+                    android:textStyle="bold"
                     android:textColor="@color/colorblack"
                     android:layout_marginTop="@dimen/size_20dp"
                     android:padding="@dimen/padd_10"
@@ -118,9 +122,105 @@
                     android:textColor="@color/colorblack"
                     android:layout_marginTop="@dimen/size_20dp"
                     android:padding="@dimen/padd_10"
+                    android:textStyle="bold"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/size_15dp"
                     android:fontFamily="@font/amaranth"/>
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_paymentmethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_pricedetails"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginLeft="@dimen/size_16dp"
+            android:layout_marginRight="@dimen/size_16dp"
+            app:cardElevation="@dimen/padd_10"
+            app:cardBackgroundColor="@color/colorwhite">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_paymentheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Payment Method"
+                    android:textSize="@dimen/size_20dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:textColor="@color/colorblack"
+                    android:fontFamily="@font/amaranth"
+                    android:layout_centerHorizontal="true"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_paymentheading"
+                    android:layout_marginTop="@dimen/size_15dp">
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Debit Card"
+                        android:fontFamily="@font/amaranth"
+                        android:textSize="@dimen/size_16dp"
+                        android:drawableLeft="@drawable/ic_credit_card"
+                        android:layout_marginLeft="@dimen/size_16dp"
+                        android:drawablePadding="@dimen/size_8dp"
+                        android:padding="@dimen/padd_10"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPI Pin"
+                        android:fontFamily="@font/amaranth"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/size_16dp"
+                        android:drawableLeft="@drawable/ic_paytm"
+                        android:drawablePadding="@dimen/size_8dp"
+                        android:padding="@dimen/padd_10"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit Card"
+                        android:fontFamily="@font/amaranth"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/size_16dp"
+                        android:drawableLeft="@drawable/ic_credit_card__1_"
+                        android:drawablePadding="@dimen/size_8dp"
+                        android:padding="@dimen/padd_10"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash On Delivery"
+                        android:fontFamily="@font/amaranth"
+                        android:textSize="@dimen/size_16dp"
+                        android:layout_marginLeft="@dimen/size_16dp"
+                        android:drawableLeft="@drawable/ic_cash_on_delivery"
+                        android:drawablePadding="@dimen/size_8dp"
+                        android:padding="@dimen/padd_10"/>
+
+
+
+
+                </RadioGroup>
+
+
 
 
 
@@ -147,7 +247,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/white"
-                android:text="Add to cart"
+                android:text="Rs.15000/-"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton

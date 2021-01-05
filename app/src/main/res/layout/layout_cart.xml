@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/cardView_cart"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="130dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_marginBottom="@dimen/padd_10"
         app:cardBackgroundColor="@color/colorwhite"
@@ -23,7 +23,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_close_24"
+                android:src="@drawable/ic_baseline_delete_24"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:padding="@dimen/size_8dp"/>
@@ -48,9 +48,9 @@
                 android:layout_toRightOf="@id/imageView_item"
                 android:text="@{cartItems.item_name}"
                 android:layout_marginLeft="@dimen/size_16dp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textSize="@dimen/size_16dp"
-                android:layout_marginTop="@dimen/size_35dp"
+                android:layout_marginTop="@dimen/size_15dp"
                 android:textColor="@color/colorblack"
                 android:fontFamily="@font/amaranth"/>
 
@@ -59,18 +59,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/imageView_item"
-                android:text="10 %"
+                android:text="10 %off"
                 android:padding="@dimen/size_2dp"
-                android:background="@color/colorDarkstateRed"
                 android:layout_marginLeft="@dimen/size_16dp"
                 android:textStyle="normal"
                 android:textSize="@dimen/size_14dp"
                 android:layout_below="@id/text_itemName"
-                android:layout_marginTop="@dimen/size_8dp"
-                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:textColor="@color/md_grey_500"
                 android:fontFamily="@font/amaranth"/>
 
             <TextView
+                android:id="@+id/text_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/imageView_item"
@@ -79,7 +79,7 @@
                 android:textStyle="normal"
                 android:textSize="@dimen/size_14dp"
                 android:layout_below="@id/text_offer"
-                android:layout_marginTop="@dimen/size_8dp"
+                android:layout_marginTop="@dimen/size_5dp"
                 android:textColor="@color/colorblack"
                 android:fontFamily="@font/amaranth"/>
 
@@ -88,9 +88,10 @@
                 android:id="@+id/qtyLay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/size_10dp"
+                android:layout_toRightOf="@id/imageView_item"
+                android:layout_below="@id/text_price"
                 android:background="@color/md_grey_300"
                 android:padding="@dimen/size_8dp"
                 android:orientation="horizontal">
@@ -114,7 +115,7 @@
                     android:text="1"
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/size_16dp" />
+                    android:textSize="@dimen/size_10dp" />
 
                 <ImageView
                     android:id="@+id/plus"

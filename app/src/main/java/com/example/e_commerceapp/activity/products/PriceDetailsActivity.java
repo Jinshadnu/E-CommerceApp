@@ -3,6 +3,7 @@ package com.example.e_commerceapp.activity.products;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.e_commerceapp.R;
@@ -18,5 +19,9 @@ public ActivityPriceDetailsBinding priceDetailsBinding;
         priceDetailsBinding.layoutBase.textTitle.setText("Price Details");
 
         priceDetailsBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
+
+        priceDetailsBinding.btnBuy.setOnClickListener(v -> {
+            startActivity(new Intent(PriceDetailsActivity.this,SuccessActivity.class));
+        });
     }
 }

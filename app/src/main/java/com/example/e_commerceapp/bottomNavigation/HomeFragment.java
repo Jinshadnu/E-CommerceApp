@@ -88,8 +88,9 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         homeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
-        homeBinding.layoutBase.toolbar.setTitle("Home");
-        homeBinding.layoutBase.textTitle.setText("Home");
+//
+
+
 
 
         homeBinding.recyclerCategories.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));

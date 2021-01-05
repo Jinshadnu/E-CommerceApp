@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import com.example.e_commerceapp.R;
 import com.example.e_commerceapp.bottomNavigation.HomeActivity;
+import com.example.e_commerceapp.bottomNavigation.StartActivity;
 import com.example.e_commerceapp.databinding.ActivityOTPBinding;
 
 public class OTPActivity extends AppCompatActivity {
@@ -21,7 +22,7 @@ public ActivityOTPBinding otpBinding;
         otpBinding= DataBindingUtil.setContentView(this,R.layout.activity_o_t_p);
 
         otpBinding.buttonVerify.setOnClickListener(view -> {
-            startActivity(new Intent(OTPActivity.this,HomeActivity.class));
+            startActivity(new Intent(OTPActivity.this, StartActivity.class));
         });
     }
 }

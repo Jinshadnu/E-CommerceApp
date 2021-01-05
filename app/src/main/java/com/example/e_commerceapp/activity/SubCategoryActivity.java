@@ -37,8 +37,8 @@ public ItemsAdapter itemsAdapter;
 
         subCategoryViewModel= ViewModelProviders.of(this).get(SubCategoryViewModel.class);
 
-        subCategoryBinding.recyclerSubCategories.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
-        subCategoryBinding.recyclerSubCategories.setHasFixedSize(true);
+//        subCategoryBinding.recyclerSubCategories.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
+//        subCategoryBinding.recyclerSubCategories.setHasFixedSize(true);
 
         subCategoryBinding.recyclerProducts.setLayoutManager(new GridLayoutManager(this,2));
         subCategoryBinding.recyclerProducts.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(2), true));
@@ -47,7 +47,8 @@ public ItemsAdapter itemsAdapter;
         subCategoryBinding.recyclerProducts.addItemDecoration(dividerItemDecoration);
         subCategoryBinding.recyclerProducts.setHasFixedSize(true);
 
-        getSubCategoris();
+        //
+        // getSubCategoris();
 
         getItems();
     }
@@ -57,12 +58,12 @@ public ItemsAdapter itemsAdapter;
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
 
-    public void getSubCategoris(){
-        subCategoryViewModel.getSubCategories().observe((LifecycleOwner)this,subCategories -> {
-           subCategoryAdapter=new SubCategoryAdapter(this,subCategories);
-           subCategoryBinding.recyclerSubCategories.setAdapter(subCategoryAdapter);
-        });
-    }
+//    public void getSubCategoris(){
+//        subCategoryViewModel.getSubCategories().observe((LifecycleOwner)this,subCategories -> {
+//           subCategoryAdapter=new SubCategoryAdapter(this,subCategories);
+//           subCategoryBinding.recyclerSubCategories.setAdapter(subCategoryAdapter);
+//        });
+//    }
 
     public void getItems(){
         subCategoryViewModel.getItems().observe((LifecycleOwner)this,items -> {

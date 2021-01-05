@@ -8,12 +8,22 @@
         tools:context=".bottomNavigation.CartFragment"
         android:background="#F4F5FA">
 
-        <include
-            android:id="@+id/layoutBase"
-            layout="@layout/layout_base"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/edittext_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="@dimen/padd_10"
+            android:hint="Search Here"
+            android:fontFamily="@font/amaranth"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:layout_marginRight="@dimen/size_15dp"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:drawablePadding="@dimen/padd_10"/>
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -21,7 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/padd_10"
-            android:layout_below="@id/layoutBase"/>
+            android:layout_marginBottom="@dimen/size_50dp"
+            android:layout_below="@id/edittext_search"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,11 +46,11 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@color/colorwhite"
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/padd_10"
                 android:text="0000.00"
-                android:textColor="@color/black"
+                android:textColor="@color/colorblack"
                 android:textSize="18sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -47,9 +58,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorDarkstateRed"
+                android:background="@drawable/button_rectangle_unselected"
                 android:text="CheckOut"
-                android:textColor="@color/white" />
+                android:textColor="@color/colorblack" />
         </LinearLayout>
 
 

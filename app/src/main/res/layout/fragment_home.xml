@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#F4F5FA"
@@ -14,17 +14,11 @@
            android:layout_height="match_parent">
 
 
-           <include
-               android:id="@+id/layoutBase"
-               layout="@layout/layout_base"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent" />
+
 
            <RelativeLayout
                android:id="@+id/rl_banner"
                android:layout_width="match_parent"
-               android:layout_below="@id/layoutBase"
                android:layout_marginTop="0dp"
                android:layout_height="@dimen/size_180dp"
                android:focusableInTouchMode="true">
@@ -50,49 +44,98 @@
                    tools:ignore="MissingClass" />
            </RelativeLayout>
 
-           <TextView
-               android:id="@+id/text_categories"
-               android:layout_width="wrap_content"
+           <RelativeLayout
+               android:id="@+id/relative_categories"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Categories"
-               android:textStyle="bold"
-               android:padding="@dimen/size_5dp"
-               android:textSize="@dimen/size_20dp"
-               android:textColor="@color/colorblack"
-               android:textAlignment="center"
-               android:fontFamily="@font/amaranth"
                android:layout_below="@id/rl_banner"
-               android:layout_marginLeft="@dimen/padd_10"
-               android:layout_marginTop="@dimen/size_7dp"/>
+               android:background="#FF6347"
+               android:padding="@dimen/size_5dp">
+
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/text_categories"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Categories"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/size_20dp"
+                   android:textColor="@color/colorwhite"
+                   android:drawablePadding="@dimen/padd_10"
+                   android:fontFamily="@font/amaranth"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="@dimen/size_10dp"
+                   android:layout_marginRight="@dimen/size_10dp"
+                   android:layout_marginTop="@dimen/size_15dp"/>
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/text_categoriesall"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="seeall"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/size_15dp"
+                   android:textColor="@color/colorwhite"
+                   android:drawablePadding="@dimen/padd_10"
+                   android:layout_alignParentRight="true"
+                   android:fontFamily="@font/amaranth"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="@dimen/size_10dp"
+                   android:layout_marginRight="@dimen/size_15dp"
+                   android:layout_marginTop="@dimen/size_15dp"/>
+
+
+           </RelativeLayout>
+
+
 
            <androidx.recyclerview.widget.RecyclerView
                android:id="@+id/recycler_categories"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:layout_below="@id/text_categories"
-               android:layout_marginTop="@dimen/size_2dp"
+               android:layout_below="@id/relative_categories"
+               android:layout_marginTop="@dimen/size_10dp"
                />
 
-           <TextView
+
+           <androidx.appcompat.widget.AppCompatTextView
                android:id="@+id/text_popular_products"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+               android:layout_below="@id/recycler_categories"
+               android:layout_marginLeft="@dimen/size_10dp"
+               android:layout_marginTop="7dp"
+               android:layout_marginRight="@dimen/size_10dp"
+               android:fontFamily="@font/amaranth"
                android:text="Special Offers"
                android:textColor="@color/colorblack"
-               android:fontFamily="@font/amaranth"
-               android:textAlignment="center"
-               android:textStyle="bold"
-               android:layout_below="@id/recycler_categories"
-               android:layout_marginTop="@dimen/size_5dp"
                android:textSize="@dimen/size_20dp"
-               android:layout_marginLeft="@dimen/size_10dp"/>
+               android:textStyle="bold" />
+
+           <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/text_specialoffersall"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="seeall"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/size_15dp"
+                   android:textColor="@color/colorwhite"
+                   android:drawablePadding="@dimen/padd_10"
+                   android:layout_alignParentRight="true"
+                   android:fontFamily="@font/amaranth"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="@dimen/size_10dp"
+                   android:layout_marginRight="@dimen/size_15dp"
+                   android:layout_marginTop="@dimen/size_15dp"/>
+
+
 
            <androidx.recyclerview.widget.RecyclerView
                android:id="@+id/recycler_popular_products"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_below="@id/text_popular_products"
-               android:layout_marginTop="@dimen/size_2dp"
+               android:layout_marginTop="@dimen/size_3dp"
                />
 
            <TextView
@@ -105,9 +148,9 @@
                android:fontFamily="@font/amaranth"
                android:textStyle="bold"
                android:layout_below="@id/recycler_popular_products"
-               android:layout_marginTop="@dimen/size_2dp"
+               android:layout_marginTop="@dimen/size_10dp"
                android:textSize="@dimen/size_20dp"
-               android:layout_marginLeft="@dimen/size_16dp"/>
+               android:layout_marginLeft="@dimen/size_10dp"/>
 
            <androidx.recyclerview.widget.RecyclerView
                android:id="@+id/recycler_featured_products"
@@ -116,8 +159,6 @@
                android:layout_below="@id/text_featured_products"
                android:layout_marginTop="@dimen/size_1dp"
                android:padding="@dimen/size_5dp"/>
-
-
 
        </RelativeLayout>
 

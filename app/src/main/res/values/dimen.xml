@@ -88,7 +88,7 @@
     <dimen name="ic_delete">30dp</dimen>
     <dimen name="thumbnail">90dp</dimen>
 
-    <dimen name="fab_margin">16dp</dimen>
+    
     <dimen name="activity_margin">16dp</dimen>
     <dimen name="dimen_8dp">8dp</dimen>
     <dimen name="profile_image">100dp</dimen>

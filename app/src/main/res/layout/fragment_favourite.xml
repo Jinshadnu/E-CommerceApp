@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F4F5FA"
-    tools:context=".bottomNavigation.FavouriteFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <include
-        android:id="@+id/layoutBase"
-        layout="@layout/layout_base"
-        app:layout_constraintEnd_toEndOf="parent"
-       />
-
-    <EditText
-        android:id="@+id/edittext_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
-        android:layout_below="@id/layoutBase"
-        android:padding="@dimen/padd_10"
-        android:hint="Search Here"
-        android:fontFamily="@font/amaranth"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/size_15dp"
-        android:drawableLeft="@drawable/ic_baseline_search_24"
-        android:layout_marginRight="@dimen/size_15dp"
-        android:layout_marginLeft="@dimen/size_15dp"
-        android:drawablePadding="@dimen/padd_10"/>
-    
-    <androidx.recyclerview.widget.RecyclerView
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/edittext_search"
-        android:layout_marginTop="@dimen/padd_10"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#F4F5FA"
+        tools:context=".bottomNavigation.FavouriteFragment">
 
-</RelativeLayout>
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <EditText
+            android:id="@+id/edittext_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="@dimen/padd_10"
+            android:hint="Search Here"
+            android:fontFamily="@font/amaranth"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:layout_marginRight="@dimen/size_15dp"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:drawablePadding="@dimen/padd_10"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_favourites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/edittext_search"
+            android:layout_marginTop="@dimen/padd_10"/>
+
+    </RelativeLayout>
+</layout>
