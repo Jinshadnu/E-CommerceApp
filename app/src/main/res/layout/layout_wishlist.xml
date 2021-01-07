@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="wishlist"
             type="com.example.e_commerceapp.bottomNavigation.pojo.Wishlist" />
     </data>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardElevation="@dimen/padd_10"
+            app:cardCornerRadius="@dimen/size_8dp"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:layout_marginBottom="@dimen/size_8dp"
+            android:layout_marginLeft="@dimen/padd_10"
+            android:layout_marginRight="@dimen/padd_10"
             app:cardBackgroundColor="@color/colorwhite">
 
             <RelativeLayout
@@ -64,6 +66,7 @@
                     android:layout_marginLeft="@dimen/padd_10"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_cart"
                     android:layout_width="@dimen/size_110dp"
                     android:layout_height="@dimen/size_30dp"
                     android:layout_below="@id/text_price"
@@ -83,15 +86,9 @@
                     android:layout_alignParentRight="true"
                     android:src="@drawable/ic_baseline_delete_24"/>
 
-
-
             </RelativeLayout>
-
-
 
         </androidx.cardview.widget.CardView>
 
 
-
-    </RelativeLayout>
 </layout>

@@ -1,5 +1,6 @@
 package com.example.e_commerceapp.bottomNavigation;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -9,7 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.e_commerceapp.MainActivity;
 import com.example.e_commerceapp.R;
+import com.example.e_commerceapp.activity.user.ChangepasswordActivity;
+import com.example.e_commerceapp.activity.user.ForgotPasswordActivity;
+import com.example.e_commerceapp.activity.user.MyOrderActivity;
 import com.example.e_commerceapp.databinding.FragmentProfileBinding;
 
 /**
@@ -65,6 +70,21 @@ public FragmentProfileBinding profileBinding;
         // Inflate the layout for this fragment
 
         profileBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_profile,container,false);
+        profileBinding.textHistory.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), MyOrderActivity.class));
+        });
+
+        profileBinding.textChangepassword.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), ChangepasswordActivity.class));
+        });
+
+        profileBinding.textForgetpassword.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), ForgotPasswordActivity.class));
+        });
+
+        profileBinding.textLogout.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), MainActivity.class));
+        });
 //        profileBinding.layoutBase.textTitle.setText("Profile");
 //
 //        profileBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);

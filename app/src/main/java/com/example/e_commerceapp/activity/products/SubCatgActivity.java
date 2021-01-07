@@ -29,6 +29,10 @@ public ActivitySubCatgBinding subCatgBinding;
 
         subCatgBinding= DataBindingUtil.setContentView(this,R.layout.activity_sub_catg);
 
+        subCatgBinding.layoutBase.textTitle.setText("Select SubCategory");
+
+        subCatgBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
+
         subCategoryViewModel= ViewModelProviders.of(this).get(SubCategoryViewModel.class);
 
         subCatgBinding.recyclerSubcategory.setLayoutManager(new GridLayoutManager(this,2));

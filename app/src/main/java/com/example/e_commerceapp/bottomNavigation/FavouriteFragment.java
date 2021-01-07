@@ -85,9 +85,9 @@ public class FavouriteFragment extends Fragment {
         favouriteBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_favourite, container, false);
 
         favouriteBinding.recyclerFavourites.setLayoutManager(new LinearLayoutManager(getActivity()));
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(),
-                DividerItemDecoration.VERTICAL);
-        favouriteBinding.recyclerFavourites.addItemDecoration(dividerItemDecoration);
+//        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(),
+//                DividerItemDecoration.VERTICAL);
+//        favouriteBinding.recyclerFavourites.addItemDecoration(dividerItemDecoration);
         favouriteBinding.recyclerFavourites.setHasFixedSize(true);
 
 //        favouriteBinding.layoutBase.textTitle.setText("My Wishlist");

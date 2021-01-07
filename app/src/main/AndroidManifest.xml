@@ -11,10 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerceApp"
         tools:replace="android:theme">
+        <activity android:name=".activity.user.ForgotPasswordActivity"></activity>
+        <activity android:name=".activity.user.ChangepasswordActivity" />
+        <activity android:name=".activity.user.MyOrderActivity" />
         <activity
             android:name=".bottomNavigation.StartActivity"
             android:label="@string/title_activity_start"
-            android:theme="@style/Theme.ECommerceApp.NoActionBar"></activity>
+            android:theme="@style/Theme.ECommerceApp.NoActionBar" />
         <activity android:name=".activity.products.SubCatgActivity" />
         <activity android:name=".activity.products.SuccessActivity" />
         <activity android:name=".activity.products.PriceDetailsActivity" />

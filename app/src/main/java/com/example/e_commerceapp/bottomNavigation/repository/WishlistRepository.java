@@ -19,7 +19,7 @@ public class WishlistRepository {
 
         List<Wishlist> wishlists=new ArrayList<>();
         wishlists.add(new Wishlist(R.drawable.iphone1,"Iphone11 Pro","Rs.1100000"));
-        wishlists.add(new Wishlist(R.drawable.galaxyf41,"Samsung Galaxyf41","Rs.900000"));
+        wishlists.add(new Wishlist(R.drawable.watch,"Watch","Rs.900000"));
         wishlists.add(new Wishlist(R.drawable.iphone1,"Iphone11 Pro","Rs.1100000"));
 
        mutableLiveData.setValue(wishlists);
