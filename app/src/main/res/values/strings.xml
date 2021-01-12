@@ -19,4 +19,19 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    
+    
+    //onboarding screen captions
+    <string name="find_foods">Find your special one</string>
+    <string name="fast_delivery">Fast Delivery</string>
+    <string name="home_delivery">Home Delivery</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+
+    <string name="find_food_description">Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep</string>
+    <string name="fast_delivery_description">Fast food delivery to your home, office wherever you are</string>
+
+
+
+
 </resources>

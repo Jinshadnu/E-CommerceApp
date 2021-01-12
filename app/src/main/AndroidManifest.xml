@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerceApp"
         tools:replace="android:theme">
-        <activity android:name=".activity.user.ForgotPasswordActivity"></activity>
+        <activity android:name=".welcome.OnboardingActivity"></activity>
+        <activity android:name=".activity.user.AddressActivity" />
+        <activity android:name=".activity.user.ForgotPasswordActivity" />
         <activity android:name=".activity.user.ChangepasswordActivity" />
         <activity android:name=".activity.user.MyOrderActivity" />
         <activity

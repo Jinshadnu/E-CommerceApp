@@ -16,6 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.e_commerceapp.R;
+import com.example.e_commerceapp.activity.adapter.FeaturedProductAdapter;
+import com.example.e_commerceapp.activity.pojo.FeaturedProducts;
+import com.example.e_commerceapp.activity.viewModel.FeaturedProductViewModel;
 import com.example.e_commerceapp.bottomNavigation.adapter.CategoriesAdapter;
 import com.example.e_commerceapp.bottomNavigation.adapter.ImageSliderAdapter;
 import com.example.e_commerceapp.bottomNavigation.adapter.OffersAdapter;
@@ -38,7 +41,9 @@ public class HomeFragment extends Fragment {
     public CategoryViewModel categoryViewModel;
     public CategoriesAdapter categoriesAdapter;
     public OffersViewModel offersViewModel;
+    public FeaturedProductViewModel featuredProductViewModel;
     public OffersAdapter offersAdapter;
+    public FeaturedProductAdapter featuredProductAdapter;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -81,6 +86,8 @@ public class HomeFragment extends Fragment {
         }
         categoryViewModel= ViewModelProviders.of((FragmentActivity)this.getActivity()).get(CategoryViewModel.class);
         offersViewModel=ViewModelProviders.of((FragmentActivity)this.getActivity()).get(OffersViewModel.class);
+        featuredProductViewModel=ViewModelProviders.of((FragmentActivity)this.getActivity()).get(FeaturedProductViewModel.class);
+
     }
 
     @Override
@@ -99,10 +106,15 @@ public class HomeFragment extends Fragment {
         homeBinding.recyclerPopularProducts.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
         homeBinding.recyclerPopularProducts.setHasFixedSize(true);
 
+        homeBinding.recyclerFeaturedProducts.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        homeBinding.recyclerCategories.setHasFixedSize(true);
+
         setValuesToFields();
 
         getCategories();
         getOffers();
+        getfeaturedProduct();
+
         return homeBinding.getRoot();
     }
 
@@ -163,6 +175,16 @@ public class HomeFragment extends Fragment {
             public void onChanged(List<Offers> offers) {
                 offersAdapter=new OffersAdapter(getActivity(),offers);
                 homeBinding.recyclerPopularProducts.setAdapter(offersAdapter);
+            }
+        });
+    }
+
+    public void getfeaturedProduct(){
+        featuredProductViewModel.getFeaturedProducts().observe((LifecycleOwner) this.getActivity(), new Observer<List<FeaturedProducts>>() {
+            @Override
+            public void onChanged(List<FeaturedProducts> featuredProducts) {
+                featuredProductAdapter=new FeaturedProductAdapter(getActivity(),featuredProducts);
+                homeBinding.recyclerFeaturedProducts.setAdapter(featuredProductAdapter);
             }
         });
     }

@@ -10,6 +10,7 @@ import android.os.Handler;
 import com.example.e_commerceapp.MainActivity;
 import com.example.e_commerceapp.R;
 import com.example.e_commerceapp.databinding.ActivitySplashBinding;
+import com.example.e_commerceapp.welcome.OnboardingActivity;
 
 public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
@@ -23,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                Intent i = new Intent(SplashActivity.this, OnboardingActivity.class);
                 startActivity(i);
 
                 finish();

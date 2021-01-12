@@ -1,5 +1,7 @@
 package com.example.e_commerceapp.bottomNavigation;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,9 +11,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.e_commerceapp.MainActivity;
 import com.example.e_commerceapp.R;
+import com.example.e_commerceapp.activity.user.AddressActivity;
 import com.example.e_commerceapp.activity.user.ChangepasswordActivity;
 import com.example.e_commerceapp.activity.user.ForgotPasswordActivity;
 import com.example.e_commerceapp.activity.user.MyOrderActivity;
@@ -24,6 +30,7 @@ import com.example.e_commerceapp.databinding.FragmentProfileBinding;
  */
 public class ProfileFragment extends Fragment {
 public FragmentProfileBinding profileBinding;
+    public EditText editText_phone,editText_email;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -70,6 +77,10 @@ public FragmentProfileBinding profileBinding;
         // Inflate the layout for this fragment
 
         profileBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_profile,container,false);
+
+        profileBinding.textAddress.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), AddressActivity.class));
+        });
         profileBinding.textHistory.setOnClickListener(v -> {
             startActivity(new Intent(getActivity(), MyOrderActivity.class));
         });
@@ -85,6 +96,10 @@ public FragmentProfileBinding profileBinding;
         profileBinding.textLogout.setOnClickListener(v -> {
             startActivity(new Intent(getActivity(), MainActivity.class));
         });
+
+        profileBinding.textEditprofile.setOnClickListener(v -> {
+            withEditText(v);
+        });
 //        profileBinding.layoutBase.textTitle.setText("Profile");
 //
 //        profileBinding.layoutBase.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
@@ -92,5 +107,40 @@ public FragmentProfileBinding profileBinding;
 //            getActivity().onBackPressed();
 //        });
        return profileBinding.getRoot();
+    }
+
+    public void withEditText(View view) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Edit Profile");
+        LayoutInflater inflater = getLayoutInflater();
+        view = inflater.inflate(R.layout.layout_edit_profile, null);
+        editText_phone=view.findViewById(R.id.editText_phone);
+        editText_email=view.findViewById(R.id.editTextEmail);
+        builder.setView(view);
+
+
+        builder.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Toast.makeText(cogetApplicationContext(), "Text entered is " + input.getText().toString(), Toast.LENGTH_SHORT).show();
+
+
+
+            }
+        });
+
+
+
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+                // Toast.makeText(cogetApplicationContext(), "Text entered is " + input.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        builder.setCancelable(false);
+        builder.show();
     }
 }

@@ -33,24 +33,35 @@
                 android:drawablePadding="@dimen/size_10dp"
                 />
 
-            <TextView
-                android:id="@+id/textView34"
+            <RelativeLayout
+                android:id="@+id/relative_categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/searchview"
-                android:layout_marginRight="@dimen/padd_10"
-                android:padding="@dimen/padd_10"
-                android:background="@color/colorDarkstateRed"
-                android:layout_marginLeft="10dp"
+                android:padding="@dimen/size_15dp"
                 android:layout_marginTop="@dimen/size_10dp"
-                android:fontFamily="@font/amaranth"
-                android:text="Select Items"
-                android:textColor="@color/colorwhite"
-                android:textAlignment="center"
-                android:textSize="@dimen/size_20dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginLeft="@dimen/padd_10"
+                android:layout_marginRight="@dimen/padd_10"
+                android:layout_below="@id/searchview"
+                android:background="@drawable/heading_border">
+
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padd_10"
+                    android:fontFamily="@font/amaranth"
+                    android:text="Select Items"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/size_20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+
 
 
 
@@ -59,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/textView34" />
+                android:layout_below="@id/relative_categories" />
 
 
 

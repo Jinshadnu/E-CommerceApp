@@ -107,7 +107,7 @@
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="right"
-                                        android:drawableTop="@drawable/ic_email"
+                                        android:drawableTop="@drawable/ic_gmail"
                                         android:drawablePadding="@dimen/padd_10"
                                         android:fontFamily="@font/amaranth"
                                         android:padding="@dimen/size_10dp"
@@ -157,7 +157,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
-                                        android:drawableLeft="@drawable/ic_programmer"
+                                        android:drawableLeft="@drawable/ic_man"
                                         android:drawableRight="@drawable/ic_baseline_person_24"
                                         android:drawablePadding="@dimen/size_8dp"
                                         android:fontFamily="@font/amaranth"
@@ -184,11 +184,43 @@
                                     android:padding="@dimen/size_5dp">
 
                                     <TextView
+                                        android:id="@+id/text_address"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:drawableLeft="@drawable/ic_address"
+                                        android:drawableRight="@drawable/ic_baseline_person_24"
+                                        android:drawablePadding="@dimen/size_8dp"
+                                        android:fontFamily="@font/amaranth"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/size_8dp"
+                                        android:text="Delivery Address"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size_16dp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginLeft="@dimen/size_8dp"
+                                        android:layout_marginTop="@dimen/size_8dp"
+                                        android:layout_marginRight="@dimen/size_8dp"
+                                        android:background="@color/md_grey_300"
+                                        android:padding="@dimen/size_8dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/size_5dp">
+
+
+                                    <TextView
                                         android:id="@+id/text_history"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
-                                        android:drawableLeft="@drawable/ic_order"
+                                        android:drawableLeft="@drawable/ic_shopping_cart"
                                         android:drawableRight="@drawable/ic_baseline_lock_24"
                                         android:drawablePadding="@dimen/size_8dp"
                                         android:fontFamily="@font/amaranth"
@@ -197,7 +229,6 @@
                                         android:text="My Orders"
                                         android:textColor="@color/black"
                                         android:textSize="@dimen/size_16dp" />
-
 
                                     <View
                                         android:layout_width="match_parent"
@@ -220,7 +251,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
-                                        android:drawableLeft="@drawable/ic_password"
+                                        android:drawableLeft="@drawable/ic_password__1_"
                                         android:drawableRight="@drawable/ic_baseline_lock_24"
                                         android:drawablePadding="@dimen/size_8dp"
                                         android:fontFamily="@font/amaranth"
@@ -252,7 +283,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
-                                        android:drawableLeft="@drawable/ic_lock"
+                                        android:drawableLeft="@drawable/ic_door_key"
                                         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
                                         android:drawablePadding="@dimen/size_8dp"
                                         android:fontFamily="@font/amaranth"
@@ -284,7 +315,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
-                                        android:drawableLeft="@drawable/ic_logout"
+                                        android:drawableLeft="@drawable/ic_log_out"
                                         android:drawableRight="@drawable/ic_baseline_power_settings_new_24"
                                         android:drawablePadding="@dimen/size_8dp"
                                         android:fontFamily="@font/amaranth"

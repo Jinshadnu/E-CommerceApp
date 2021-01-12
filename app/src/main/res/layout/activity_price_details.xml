@@ -25,6 +25,7 @@
             android:layout_marginLeft="@dimen/size_16dp"
             android:layout_marginRight="@dimen/size_16dp"
             app:cardElevation="@dimen/padd_10"
+            app:cardCornerRadius="@dimen/padd_10"
             app:cardBackgroundColor="@color/colorwhite">
 
 
@@ -146,6 +147,7 @@
             android:layout_marginTop="@dimen/size_20dp"
             android:layout_marginLeft="@dimen/size_16dp"
             android:layout_marginRight="@dimen/size_16dp"
+            app:cardCornerRadius="@dimen/padd_10"
             app:cardElevation="@dimen/padd_10"
             app:cardBackgroundColor="@color/colorwhite">
 

@@ -5,16 +5,17 @@
             name="orders"
             type="com.example.e_commerceapp.activity.user.pojo.Order" />
     </data>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardElevation="@dimen/padd_10"
-            app:cardBackgroundColor="@color/colorwhite">
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:layout_marginRight="@dimen/size_15dp"
+            android:layout_marginTop="@dimen/size_8dp"
+            app:cardBackgroundColor="@color/colorwhite"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -161,5 +162,4 @@
 
 
         </androidx.cardview.widget.CardView>
-    </RelativeLayout>
 </layout>

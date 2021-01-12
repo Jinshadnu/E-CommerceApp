@@ -26,9 +26,9 @@ public OrderAdapter orderAdapter;
         myOrderBinding= DataBindingUtil.setContentView(this,R.layout.activity_my_order);
 
         myOrderBinding.recyclerMyorders.setLayoutManager(new LinearLayoutManager(this));
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
-                DividerItemDecoration.VERTICAL);
-        myOrderBinding.recyclerMyorders.addItemDecoration(dividerItemDecoration);
+//        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
+//                DividerItemDecoration.VERTICAL);
+//        myOrderBinding.recyclerMyorders.addItemDecoration(dividerItemDecoration);
         myOrderBinding.recyclerMyorders.setHasFixedSize(true);
         orderViewModel= ViewModelProviders.of(this).get(OrderViewModel.class);
 
